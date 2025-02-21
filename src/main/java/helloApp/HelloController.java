@@ -1,9 +1,6 @@
 package helloApp;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class HelloController {
@@ -19,4 +16,8 @@ public class HelloController {
         return "Hello " + name + " from BridgeLabz";
     }
 
+    @GetMapping("/hello/query/{name}")
+    public String uc3(@PathVariable String name){
+        return "Hello " + name + " from BridgeLabz";
+    }
 }
